@@ -18,12 +18,9 @@ class ViewController: UIViewController {
     var timer: Timer!
     
     var imageArray:[UIImage] = [
-        UIImage(named: "00")!,
-        UIImage(named: "01")!,
-        UIImage(named: "02")!,
-        UIImage(named: "07")!,
-        UIImage(named: "19")!,
-        UIImage(named: "28")!
+        UIImage(named: "IMG_7900.jpeg")!,
+        UIImage(named: "IMG_7901.jpeg")!,
+        UIImage(named: "IMG_7007.jpeg")!,
         ]
 
     override func viewDidLoad() {
