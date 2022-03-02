@@ -33,10 +33,10 @@
                                 <buttonConfiguration key="configuration" style="plain" title="戻る"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBR-OU-lAS">
-                                <rect key="frame" x="271" y="686" width="86" height="31"/>
+                                <rect key="frame" x="288" y="686" width="53" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="再生/停止"/>
+                                <buttonConfiguration key="configuration" style="plain" title="再生"/>
                                 <connections>
                                     <action selector="slideShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qh6-2x-gGj"/>
                                 </connections>

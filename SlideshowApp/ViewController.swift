@@ -36,12 +36,15 @@ class ViewController: UIViewController {
             
                    timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             
+                   startButton.setTitle("停止", for: .normal)
 
                } else {
                    
                    timer.invalidate()
                    
                    timer = nil
+                   
+                   startButton.setTitle("再生", for: .normal)
                    
                }
     }
