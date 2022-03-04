@@ -18,15 +18,17 @@ class ViewController: UIViewController {
     var timer: Timer!
     
     var imageArray:[UIImage] = [
-        UIImage(named: "IMG_7900.jpeg")!,
-        UIImage(named: "IMG_7901.jpeg")!,
-        UIImage(named: "IMG_7007.jpeg")!,
+        UIImage(named: "IMG_7900")!,
+        UIImage(named: "IMG_7901")!,
+        UIImage(named: "IMG_7907")!,
         ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        }
     
     @IBAction func slideShowButton(_ sender: Any) {
         if (timer == nil) {
@@ -57,5 +59,33 @@ class ViewController: UIViewController {
         
             imageView.image = imageArray[nowIndex]
         }
+    
+    @IBAction func nextImage(_ sender: Any) {
+        nowIndex += 1
+    
+        if (nowIndex == imageArray.count) {
+            
+            nowIndex = 0
+        }
+    
+        imageView.image = imageArray[nowIndex]
+    }
+    
+    @IBAction func backImage(_ sender: Any) {
+        nowIndex -= 1
+    
+        if (nowIndex == imageArray.count) {
+            
+            nowIndex = 0
+        }
+    
+        imageView.image = imageArray[nowIndex]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+            let imageViewController:ImageViewController = segue.destination as! ImageViewController
+        
+            imageViewController.x = imageView
+    }
 }
-
