@@ -11,12 +11,12 @@ class ImageViewController: UIViewController {
     
     @IBOutlet weak var expandImageView: UIImageView!
     
-    var x:String = ""
+    var x:UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        expandImageView = x
+        expandImageView.image = x
     }
     
 

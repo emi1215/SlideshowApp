@@ -86,6 +86,6 @@ class ViewController: UIViewController {
         
             let imageViewController:ImageViewController = segue.destination as! ImageViewController
         
-            imageViewController.x = imageView
+            imageViewController.x = imageView.image
     }
 }
