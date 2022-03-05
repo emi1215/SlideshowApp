@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         
             nowIndex += 1
         
-            if (nowIndex == imageArray.count) {
+            if (nowIndex >= imageArray.count) {
                 
                 nowIndex = 0
             }
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     @IBAction func nextImage(_ sender: Any) {
         nowIndex += 1
     
-        if (nowIndex == imageArray.count) {
+        if (nowIndex >= imageArray.count) {
             
             nowIndex = 0
         }
@@ -74,9 +74,8 @@ class ViewController: UIViewController {
     @IBAction func backImage(_ sender: Any) {
         nowIndex -= 1
     
-        if (nowIndex == imageArray.count) {
-            
-            nowIndex = 0
+        if nowIndex < 0 {
+            nowIndex = imageArray.count - 1
         }
     
         imageView.image = imageArray[nowIndex]
