@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        imageView.image = imageArray[nowIndex]
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         }
@@ -83,8 +84,10 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if segue.identifier == "Next" {
             let imageViewController:ImageViewController = segue.destination as! ImageViewController
         
             imageViewController.x = imageView.image
+        }
     }
 }
