@@ -37,6 +37,8 @@ class ViewController: UIViewController {
                    timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             
                    startButton.setTitle("停止", for: .normal)
+                   go.isEnabled = false
+                   back.isEnabled = false
 
                } else {
                    
@@ -45,6 +47,8 @@ class ViewController: UIViewController {
                    timer = nil
                    
                    startButton.setTitle("再生", for: .normal)
+                   go.isEnabled = true
+                   back.isEnabled = true
                    
                }
     }
@@ -71,6 +75,7 @@ class ViewController: UIViewController {
     
         imageView.image = imageArray[nowIndex]
     }
+    
     
     @IBAction func backImage(_ sender: Any) {
         nowIndex -= 1
